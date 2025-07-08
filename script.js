@@ -49,6 +49,7 @@ function reset(){
     windiv.style.backgroundColor="transparent";
     document.querySelector("#result").innerText=``;
     document.querySelector("#winn").innerText=``;
+    document.querySelector("#draww").innerText=``;
 }
 
 function play(){
@@ -67,6 +68,7 @@ function play(){
     windiv.style.backgroundColor="transparent";
     document.querySelector("#result").innerText=``;
     document.querySelector("#winn").innerText=``;
+    document.querySelector("#draww").innerText=``;
 }
 
 function game(){
@@ -129,7 +131,7 @@ function game(){
                 windiv.style.height="600px";
                 windiv.style.width="550px";
                 windiv.style.backgroundColor="#e3e0cc";
-                document.querySelector("#winn").innerText=`${res}`;
+                document.querySelector("#draww").innerText=`${res}`;
                 windiv.onclick=(()=>{
                     play(); 
                     game();
