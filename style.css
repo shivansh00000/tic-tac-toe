@@ -32,8 +32,8 @@ h1 {
 }
 
 #playbox {
-    width:470px;
-    height: 470px;
+    width:380px;
+    height: 380px;
     border-radius: 10px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -79,8 +79,8 @@ h1 {
 }
 
 .btns {
-    width:150px;
-    height: 150px;
+    width:120px;
+    height: 120px;
     border-radius: 10px;
     background-color: #c5d5c5;
     border:none;
