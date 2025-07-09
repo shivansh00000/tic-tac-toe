@@ -92,7 +92,7 @@ function game(){
                     res="O";
                     anywin=true;
                     owin++;
-                    windiv.style.height="520px";
+                    windiv.style.height="530px";
                     windiv.style.width="400px";
                     windiv.style.backgroundColor="#e3e0cc";
                     document.querySelector("#result").innerText=`${res}`;
@@ -111,7 +111,7 @@ function game(){
                     res="X";
                     anywin=true;
                     xwin++;
-                    windiv.style.height="520px";
+                    windiv.style.height="530px";
                     windiv.style.width="400px";
                     windiv.style.backgroundColor="#e3e0cc";
                     document.querySelector("#result").innerText=`${res}`;
@@ -130,7 +130,7 @@ function game(){
             if(count===9 && !anywin){
                 res="DRAW!";
                 draw++;
-                windiv.style.height="520px";
+                windiv.style.height="530px";
                 windiv.style.width="400px";
                 windiv.style.backgroundColor="#e3e0cc";
                 document.querySelector("#draww").innerText=`${res}`;
