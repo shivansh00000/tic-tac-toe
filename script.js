@@ -3,7 +3,7 @@ let windiv = document.querySelector("#winner");
 let btns = Array.from(nodeList);
 let firstTurn= "O"; let turn=firstTurn;
 let arrO=[]; let arrX=[];
-let res=""; let count=0;
+let res=""; let count=0; let anywin=false;
 let owin=0; let xwin=0; let draw=0;
 
 let winArr=[
@@ -36,7 +36,7 @@ function arrEqual(a){
 function reset(){
     firstTurn= "O"; turn=firstTurn;
     arrO=[]; arrX=[];
-    res="";     count=0;
+    res="";     count=0; anywin=false;
     owin=0 ; xwin=0; draw=0;
     btns.forEach(btn => {
         btn.disabled=false;
@@ -56,7 +56,7 @@ function play(){
     if(firstTurn==="O") firstTurn="X";
     if(firstTurn==="X") firstTurn="O";
     arrO=[]; arrX=[];
-    res="";     count=0;
+    res="";     count=0; anywin=false;
     btns.forEach(btn => {
         btn.disabled=false;
         btn.innerText="";
@@ -90,6 +90,7 @@ function game(){
                 arrO.push(idx);
                 if(arrEqual(arrO)){
                     res="O";
+                    anywin=true;
                     owin++;
                     windiv.style.height="520px";
                     windiv.style.width="400px";
@@ -108,6 +109,7 @@ function game(){
                 arrX.push(idx);
                 if(arrEqual(arrX)){
                     res="X";
+                    anywin=true;
                     xwin++;
                     windiv.style.height="520px";
                     windiv.style.width="400px";
@@ -125,7 +127,7 @@ function game(){
             document.querySelector("#Owon").innerText=`O : ${owin}`;
             document.querySelector("#Xwon").innerText=`X : ${xwin}`;
             count++;
-            if(count===9){
+            if(count===9 && !anywin){
                 res="DRAW!";
                 draw++;
                 windiv.style.height="520px";
