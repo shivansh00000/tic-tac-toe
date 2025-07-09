@@ -45,7 +45,7 @@ h1 {
 #winner {
     background-color: transparent;
     position: absolute;
-    transform: translateY(75px);
+    transform: translateY(70px);
     border-radius: 40px;
     color:#9fa9a3;
     display: flex;
